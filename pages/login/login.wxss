@@ -1,0 +1,54 @@
+.content{
+  height: 100%;
+  position: relative;
+}
+.loginTop{
+  padding:80rpx 30rpx ;
+  font-size: 40rpx;
+  font-style: 700;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+}
+.loginTop .bigText{
+  position: absolute;
+  top: -10rpx;
+  left: 0;
+  color: rgba(241, 241, 241, 0.47);
+  font-size: 120rpx;
+  z-index: -1;
+}
+.inputBox{
+  width: 90%;
+  margin-left: 5%;
+}
+.inputBox .password,.phone{
+  background-color: #fbfbfb;
+  padding: 20rpx;
+  color: #999;
+
+}
+.inputBox  input{
+  line-height: 40rpx;
+  padding: 20rpx 0;
+}
+.inputBox .password{
+  margin-top: 40rpx;
+}
+.btn button{
+  margin-top: 30rpx ;
+  border-radius: 50rpx;
+  background-color: #d43c33;
+  color: white;
+}
+.bottom{
+  margin-top: 55%;
+  text-align: center;
+}
+.forget{
+  text-align: center;
+  margin-top: 30rpx;
+}
+.zhuce{
+  color: cornflowerblue;
+}

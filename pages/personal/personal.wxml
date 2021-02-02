@@ -1,0 +1,73 @@
+<view class="profile" >
+  <image src="{{userInfo.backgroundUrl?userInfo.backgroundUrl:'/static/images/personal/bgImg2.jpg'}}" class="background"></image>
+  <view class="loginTop">
+    <view class="user" bindtap="toLogin">
+      <image src="{{userInfo.avatarUrl?userInfo.avatarUrl : '/static/images/personal/missing-face.png'}}"></image>
+      <text>{{userInfo.nickname?userInfo.nickname:"游客"}}</text>
+    </view>
+    <view class="vip-card">
+      <view class="header" >
+        <view class="titer" >
+          <text class="iconfont icon-huiyuan">云会员</text>
+          <text class="more">立即开通</text>
+        </view>
+        <view class="titer">键盘敲烂，收入过万，加油打工人</view>
+      </view>
+      <image src="/static/images/personal/vip-card-bg.png" class="background-vip"></image>
+    </view>
+  </view>
+
+  <view class="content" 
+  bindtouchstart="scrollTouchstart" 
+  bindtouchmove="scrollTouchmove"
+   bindtouchend="scrollTouchend" style="transform:translateY(-{{scrollindex*100}}%);margin-top: {{margintop}}px">
+    <view class="conten-bgc">
+      <image src="/static/images/personal/arc.png" class="topyuan"></image>
+      <view class="content-list">
+        <view class="conten-item" >
+          <view class="user-info">
+            <view class="user-info-item">
+              <text class="iconfont icon-xiaoxi"></text>
+              <text>我的消息</text>
+            </view>
+            <view class="user-info-item">
+              <text class="iconfont icon-haoyou"></text>
+              <text>我的好友</text>
+            </view>
+            <view class="user-info-item">
+              <text class="iconfont icon-geren"></text>
+              <text>我的主页</text>
+            </view>
+            <view class="user-info-item">
+              <text class="iconfont icon-clothes"></text>
+              <text>我的装扮</text>
+            </view>
+          </view>
+          <view class="user-list">
+            <view wx:if ="{{playList.length=== 0}}"  class="titer">最近播放(暂无记录)
+            </view>
+            <view wx:else  class="titer">
+              <text class="playNav">最近播放</text>
+    <!--         最近播放-->
+              <scroll-view   class="recommend-content" enable-flex scroll-x >
+                <view class="conten-item" wx:for="{{playList}}" wx:key="id">
+                  <image src="{{item.song.al.picUrl}}"></image>
+                  <text>{{item.song.al.name}}</text>
+                </view>
+              </scroll-view>
+            </view>
+            <view class="titer">我的音乐
+              <text class="titer-right iconfont icon-xiangyou"></text>
+            </view>
+            <view class="titer">我的电台
+              <text class="titer-right iconfont icon-xiangyou"></text>
+            </view>
+            <view class="titer">我的收藏
+              <text class="titer-right iconfont icon-xiangyou"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

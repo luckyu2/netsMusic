@@ -1,0 +1,10 @@
+/* components/header/header.wxss */
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.header .titer{
+  font-size: 32rpx;
+}
+

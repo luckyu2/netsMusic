@@ -1,0 +1,6 @@
+<scroll-view class="recommend-content" enable-flex scroll-x >
+  <view class="conten-item" wx:for="{{arrData}}" wx:key="id">
+    <image src="{{item.picUrl}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+</scroll-view>

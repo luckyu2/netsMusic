@@ -1,0 +1,39 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="song-detail">
+  <view class="header"><text>{{musicDetail[0].ar[0].name}}</text></view>
+
+  <view class="long-Playing">
+    <!-- 黑胶唱机的 唱针-->
+    <view class="needle {{isPlay?'needlerotate':''}}">
+      <image src="/static/images/song/needle.png"></image>
+    </view>
+    <!--   黑胶唱机的 黑胶-->
+    <view class="disc {{isPlay?'discAnitamation':''}}">
+      <image src="/static/images/song/disc.png"></image>
+    <!--      歌手封面-->
+      <view class="disc-img">
+        <image src="{{musicDetail[0].al.picUrl}}"></image>
+      </view>
+    </view>
+
+  </view>
+<!--    进度条-->
+  <view class="broadcast-pace">
+    <text>{{createtime}}</text>
+    <view class="brodcast">
+      <view class="create-bordcast" style="width:{{brodcastWith+ 'rpx'}}">
+        <view class="yuanqiu"></view>
+      </view>
+    </view>
+    <text>{{musictime}}</text>
+
+  </view>
+<!--  播放按钮-->
+  <view class="play-btn">
+    <text class="iconfont icon-suiji"></text>
+    <text class="iconfont icon-shangyishoushangyige" id="pre" bindtap="handSwitch"></text>
+    <text bindtap="playbtn" class="iconfont bigbtn {{isPlay?'icon-zanting':'icon-bofang'}}"></text>
+    <text class="iconfont icon-xiayigexiayishou" id="next" bindtap="handSwitch"></text>
+    <text class="iconfont icon-gengduo"></text>
+  </view>
+</view>

@@ -1,0 +1,129 @@
+/* pages/search/search.wxss */
+.heder{
+
+  display: flex;
+  padding: 16rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+  .search-left{
+   /*display: inline-block;*/
+  width: 60rpx;
+  height: 50rpx;
+   font-size: 40rpx;
+   line-height: 50rpx;
+}
+  /*搜索框*/
+ .heder .search {
+  display: flex;
+   position: relative;
+   flex: 1;
+  border: 2rpx solid #eee;
+  text-align: left;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+  margin: 0 20rpx;
+   background-color: #f5f5f5;
+   border-radius: 25rpx;
+}
+.heder .search input{
+  height: 100%;
+}
+ .search .esc{
+   line-height: 60rpx;
+ }
+ /*取消按钮*/
+.search  .cancel{
+  position: absolute;
+  top: 5rpx;
+  right: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  color: red;
+  border-radius: 50%;
+  background-color: #fff;
+  line-height: 35rpx;
+  text-align: center;
+}
+ /*搜索历史*/
+.history{
+  position: relative;
+  padding: 0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20rpx 0;
+}
+.history .history-title{
+  font-size: 26rpx;
+}
+.history .history-item{
+  font-size: 26rpx;
+  background-color: #eee;
+  border-radius: 10rpx;
+  text-align: center;
+  padding: 5rpx;
+  margin: 5rpx 10rpx;
+}
+.history .delete{
+  position: absolute;
+  right: 55rpx;
+  bottom: -10px;
+  color: #666666;
+}
+ /*搜索结果展示*/
+.search-box .search-content{
+  position: absolute;
+  top: 37px;
+  left: 40rpx;
+  z-index: 9;
+  width: 550rpx;
+  padding-left: 60rpx;
+  background-color: #fff;
+  border: 2rpx solid #f7f7f7;
+  border-radius: 0 0  20rpx 20rpx;
+  box-shadow: 5rpx 10rpx 5rpx  #f7f7f7;
+ }
+.search-box .search-content-item{
+  display: block;
+  width: 90%;
+  padding: 10rpx 0;
+  border-bottom:2rpx solid #f5f5f5;
+}
+.search-box .search-content  .title text{
+  color: cornflowerblue;
+  font-size: 24rpx;
+}
+ .hotSearch{
+   padding: 0 20rpx;
+ }
+ .titel{
+   line-height: 60rpx;
+   height: 60rpx;
+ }
+.hotSearch-conten{
+  display: flex;
+  flex-wrap: wrap;
+  border-top:1rpx solid #eee;
+  /*min-height: 400rpx;*/
+}
+.hotSearch-conten .hotSearch-item{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.hotSearch-conten .hotSearch-item{
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hotSearch-conten .hotSearch-item .count{
+  margin-right: 6rpx;
+}
+.hotSearch-conten .hotSearch-item image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}

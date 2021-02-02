@@ -1,0 +1,113 @@
+/* pages/index/index.wxss */
+/*轮播图*/
+.banner{
+	width: 100%;
+	height: 300rpx;
+}
+.banner-item image{
+	width: 100%;
+	height: 100%;
+}
+/*导航栏五个标签*/
+.navBar{
+	display: flex;
+}
+.navBar-item{
+	display: flex;
+	width: 20%;
+	flex-direction: column;
+	align-items: center;
+}
+.iconfont{
+	width: 100rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size: 50rpx;
+	color: #FFF;
+	background-color: #d43c33;
+	text-align: center;
+	border-radius: 50%;
+	margin: 20rpx 0;
+}
+/*每日推荐*/
+/*每日推荐头部*/
+
+.recommend .header {
+	font-size: 30rpx;
+	color: #666;
+	padding: 20rpx 10rpx;
+}
+.recommend .header .titer{
+	font-size: 32rpx;
+	color: #000;
+}
+.recommend .header .titer .more{
+	float: right;
+	border: 1rpx solid #999;
+	border-radius: 15rpx;
+	font-size: 25rpx;
+	padding: 10rpx;
+}
+/*每日推荐内容部分*/
+.recommend-content{
+	display: flex;
+	height: 300rpx;
+	box-sizing: border-box;
+}
+.conten-item{
+	width: 200rpx;
+	margin: 0 10rpx;
+}
+.conten-item image{
+	width: 200rpx;
+	height: 200rpx;
+}
+.conten-item text{
+	font-size: 24rpx;
+	/*单行文本溢出*/
+	/*display: block;*/
+	/*white-space: nowrap;*/
+	/*overflow: hidden;*/
+	/*text-overflow: ellipsis;*/
+	/*多行文本溢出*/
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+}
+/*热歌排行榜内容区域*/
+.topList{
+	height: 760rpx;
+}
+.topListItem{
+	width: 95%;
+	background-color: #fbfbfb;
+}
+.topListItem image{
+	width: 100rpx;
+	height: 100rpx;
+	vertical-align: middle;
+	border-radius: 10rpx;
+}
+.topListItem .musicItem{
+	display: flex;
+	padding: 8rpx 20rpx;
+}
+.topListItem .titer{
+	padding: 8rpx 20rpx;
+}
+.topListItem .musicItem .count{
+	display: inline-block;
+	line-height: 100rpx;
+	text-align: center;
+	margin: 0 30rpx;
+}
+.topListItem .musicItem .musicName{
+	display: inline-block;
+	line-height: 100rpx;
+	max-width:400rpx;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

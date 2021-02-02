@@ -1,0 +1,143 @@
+/* pages/songDetail/songDetail.wxss */
+.song-detail{
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0 ,0 ,.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header{
+  height: 45rpx;
+  position: relative;
+  padding:0 60rpx;
+  padding-top: 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  background-color: #7f7f7f ;
+  z-index: 99;
+}
+/*黑胶唱机画面*/
+.long-Playing{
+  /*position: relative;*/
+  display: flex;
+  height: 75%;
+  flex-direction: column;
+  align-items: center;
+}
+.needle{
+  position: relative;
+  top: -1%;
+  left: 60rpx;
+  height: 328rpx;
+  width: 240rpx;
+  transform: rotate(-20deg);
+  transform-origin:30rpx 0 ;
+  transition:transform 1s ;
+  z-index: 2;
+  margin-bottom: -30%;
+}
+.long-Playing .needle image{
+  height: 100%;
+  width: 100%;
+}
+/*唱针的动画*/
+.needlerotate{
+  transform: rotate(0deg);
+  transform-origin:0 ;
+}
+/*磁盘的动画*/
+.discAnitamation{
+  animation: disc  2.5s linear 0.5s infinite;
+}
+@keyframes disc {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.long-Playing .disc{
+  position: relative;
+
+}
+.long-Playing .disc image{
+  width: 580rpx;
+  height: 580rpx;
+}
+.long-Playing .disc-img{
+  width: 380rpx;
+  height: 380rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+.long-Playing .disc-img image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+  /*进度条区域*/
+.broadcast-pace{
+  margin-bottom: 30rpx;
+  height: 70rpx;
+  /*width: 70%;*/
+  display: flex;
+  /*border: 2rpx solid red;*/
+  line-height: 70rpx;
+  justify-content: center;
+}
+/*总进度条*/
+.broadcast-pace .brodcast{
+  /*flex: 1;*/
+  position: relative;
+  width: 400rpx;
+  /*border: 1rpx solid #333;*/
+  background-color: rgba(0,0,0,.3);
+  height: 4rpx;
+  margin: auto 10rpx;
+  z-index: 0;
+}
+/*播放进度条*/
+.brodcast .create-bordcast{
+  position: absolute;
+  left: 0;
+  top: -2rpx;
+  height: 4rpx;
+  background-color: #d43c33;
+}
+.create-bordcast .yuanqiu{
+  position: absolute;
+  top: -1rpx;
+  right:-2rpx;
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 50%;
+  z-index: 99;
+  border: 2rpx solid #fff;
+  background-color: #fff;
+}
+/*播放按钮*/
+.song-detail .play-btn{
+  width: 100%;
+  display: flex;
+  border-top:2rpx solid #fff ;
+  justify-content: center;
+  padding-top: 10rpx;
+}
+ .play-btn .iconfont{
+  font-size: 60rpx;
+   line-height: 120rpx;
+   padding: 0 30rpx;
+   color: #c2c0c2;
+}
+.song-detail .play-btn  .bigbtn{
+  font-size: 100rpx;
+  color: #eeeeee;
+}

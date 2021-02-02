@@ -1,0 +1,30 @@
+<view class="recommendSong-box">
+<!--  头部区域-->
+	<view class="header">
+    <image src="/static/images/recommendSong/recommendSong.jpg"></image>
+
+    <view class="times">
+      <text class="day">{{day}}日/</text>
+      <text class="month">{{month}}月</text>
+    </view>
+    <view class="biaobai"><text>瑞琪:{{(times>17|times<7)?'晚上好呀~':'记得好好吃饭'}}</text></view>
+  </view>
+  <view class="content">
+    <header title="播放全部" more="多选" ></header>
+<!--    <view class="musicItem" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="musicItem">-->
+<!--        bindscrolltolower="handtolower"  上拉刷新事件-->
+<block hidden="{{!showList}}">
+    <scroll-view scroll-y  class="music-list"     bindscrolltolower="handtolower"
+    >
+      <view class="music-item" wx:for="{{musicList}}" data-index="{{index}}" data-song="{{item}}" wx:key="id"  bindtap="toSongDetail">
+        <image lazy-load="true" src="{{item.album.picUrl}}"></image>
+        <view class="music-info">
+          <text class="musicName">{{item.name}}</text>
+          <text class="singer">{{item.artists[0].name}}</text>
+        </view>
+        <view class="iconfont icon-gengduoda"></view>
+      </view>
+    </scroll-view>
+  </block>
+  </view>
+</view>

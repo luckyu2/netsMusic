@@ -1,0 +1,21 @@
+/* components/scroll/scroll.wxss */
+.recommend-content{
+  display: flex;
+  height: 300rpx;
+  box-sizing: border-box;
+}
+.conten-item{
+  width: 200rpx;
+  margin: 0 10rpx;
+}
+.conten-item image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.conten-item text{
+  font-size: 24rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}

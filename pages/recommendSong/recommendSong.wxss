@@ -1,0 +1,71 @@
+/* pages/recommendSong/recommendSong.wxss */
+ .header{
+  position: relative;
+  height: 300rpx;
+  width: 100%;
+}
+ .header image{
+  width: 100%;
+  height: 100%;
+}
+.header .times{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  margin-left: -100rpx;
+  margin-top: -50rpx;
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.header .times .day{
+  font-size: 40rpx;
+}
+.biaobai text{
+  position: relative;
+  top: -90rpx;
+  left: 36%;
+  display: block;
+  height: 40rpx;
+  width: 100%;
+  color: #FFF;
+}
+.content{
+  padding: 0 20rpx;
+}
+.header .more{
+  font-size: 32rpx;
+  padding-right: 20rpx;
+}
+.music-list{
+  height: calc(100vh - 360rpx);
+}
+ .music-list image{
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: middle;
+  border-radius: 10rpx;
+   margin-right: 20rpx;
+}
+ .music-list .music-item{
+  display: flex;
+   margin: 10rpx 0;
+  justify-content: space-between;
+}
+ .music-list .music-item .music-info{
+   flex: 1;
+   display: flex;
+   color: #333;
+   flex-direction: column;
+}
+.music-list .music-item .music-info text{
+  line-height: 50rpx;
+  text-align: left;
+}
+.music-list .music-item .iconfont{
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: #666666;
+}

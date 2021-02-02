@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navHeader": "/components/navHeader/navHeader"
+  },
+    "navigationBarTitleText": "发现音乐"
+}

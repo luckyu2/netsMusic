@@ -1,0 +1,18 @@
+/* components/navHeader/navHeader.wxss */
+.header {
+  font-size: 30rpx;
+  color: #666;
+  padding: 20rpx 10rpx;
+}
+.header .titer{
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  color: #000;
+}
+.header .titer .more{
+  border: 1rpx solid #999;
+  border-radius: 15rpx;
+  font-size: 25rpx;
+  padding: 10rpx;
+}

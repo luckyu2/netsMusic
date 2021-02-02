@@ -1,0 +1,5 @@
+<!--只有左右两边的布局-->
+<view class="header-nav" >
+  <text class="titer">{{title}}</text>
+  <text class="more">{{more}}</text>
+</view>

@@ -1,0 +1,57 @@
+<!--pages/video/video.wxml-->
+<view class="vider-box">
+<!--  顶部区域-->
+<view class="heder">
+    <image src="/static/images/video/video.jpg"></image>
+    <view class="search" bindtap="toSearch" >搜索音乐</view>
+    <image src="/static/images/logo.png"></image>
+  </view>
+<!--  视频nav列表-->
+  <scroll-view  
+    scroll-x
+    enable-flex
+    scroll-into-view="{{'s'+ navId}}"
+    scroll-with-animation
+   class="nav-scroll" >
+      <view class="navitem " id="{{'s'+item.id}}"  wx:for="{{groupList}}" wx:key="id">
+        <view bindtap="navActive" class="nav-content {{navId === item.id? 'active':''}}" id="{{item.id}}">
+          {{item.name}}
+        </view>y
+      </view>
+  </scroll-view>
+<!--  视频内容-->
+  <scroll-view
+      scroll-y
+      refresher-enabled
+      refresher-triggered="{{isTriggered}}"
+      bindrefresherrefresh="handrefresh"
+      bindscrolltolower="handtolower"
+      class="video-group">
+    <view class="video-content" wx:for="{{videogroupList}}" wx:key="id">
+<!--      视频顶部-->
+      <view class="video-top">
+        <view class="video-top-left">
+          <image src="{{item.data.creator.avatarUrl}}"></image>
+          <text>{{item.data.creator.nickname}}</text>
+        </view>
+        <view class="video-top-right" >
+          <text class="iconfont icon-pinglun"> {{item.data.commentCount}}</text>
+          <text class="iconfont icon-buoumaotubiao16"> {{item.data.shareCount}}</text>
+          <button open-type="share" plain class="iconfont icon-ziyuan"></button>
+        </view>
+      </view>
+<!--      视频内容-->
+      <view class="video-item" >
+        <video
+            wx:if="{{videoId === item.data.vid}}"
+            bindtap="handPlayVideo"
+            object-fit="cover"
+            poster="{{item.data.coverUrl}}"
+            controls id="{{item.data.vid}}"
+            src="{{item.data.urlInfo.url}}" ></video>
+          <image id="{{item.data.vid}}" bindtap="handPlay"  wx:else  src="{{item.data.coverUrl}}"></image>
+        <view  class="title"><text>{{item.data.title}}</text></view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

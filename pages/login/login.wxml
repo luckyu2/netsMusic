@@ -1,0 +1,21 @@
+<view class="content">
+	<view class="loginTop">
+		<text>欢迎回来！</text>
+		<text class="bigText">LOGIN</text>
+	</view>
+	<view class="inputBox">
+		<view	class="phone">手机号
+			<input type="text" placeholder="请输入手机号码" id="phone" bindinput="handInput" />
+		</view>
+		<view class="password">密码
+			<input type="password" placeholder="请输入密码" id="password" bindinput="handInput"/>
+		</view>
+		<view class="btn" bindtap="login"><button>登录</button></view>
+		<view class="zhuce forget" >忘记密码？</view>
+		<view class="bottom" >
+		<text>还没有账号？</text>
+		<text class="zhuce">马上注册</text>
+
+		</view>
+	</view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "header": "/components/header/header"
+  },
+  "navigationBarTitleText": "每日推荐",
+  "navigationBarBackgroundColor": "#95d7e0"
+
+}

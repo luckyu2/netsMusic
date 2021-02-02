@@ -1,0 +1,36 @@
+<!--pages/search/search.wxml-->
+<view class="search-box">
+<!--  搜索栏-->
+  <view class="heder">
+    <view class="search">
+      <text class="iconfont icon-sousuo search-left"></text>
+      <input type="text" value="{{searchContent}}" placeholder="搜索音乐" bindinput="handKeyword"/>
+      <text class="cancel" wx:if="{{clearShow}}" bindtap="cancel">x</text>
+    </view>
+    <text class="esc" bindtap="cancel">取消</text>
+  </view>
+<!--  搜索历史-->
+  <view class="history" wx:if="{{HistorySave.length}}">
+    <view class="history-title">搜索历史</view>
+    <view class="history-item"  wx:for="{{HistorySave}}" wx:key="HistorySave">{{item}}</view>
+    <view class="delete" bindtap="deleteHistoryList"><text class="iconfont icon-shanchu"></text></view>
+  </view>
+<!--  搜索内容展示-->
+  <view class="search-content" style="{{searchContent? 'display: block' : 'display: none'}}">
+    <view class="title"><text >搜索内容"{{searchContent}}"</text></view>
+    <view class="search-content-item" wx:for="{{serchList}}" wx:key="id">{{item.name}}</view>
+
+  </view>
+<!--  热搜榜-->
+  <view class="hotSearch">
+    <view class="titel">热搜榜</view>
+    <view class="hotSearch-conten" >
+      <view class="hotSearch-item" wx:for="{{searchHot}}" wx:key="id">
+        <text class="count">{{index+1}}</text>
+        <text>{{item.searchWord}}</text>
+        <image src="{{item.iconUrl}}"></image>
+      </view>
+    </view>
+  </view>
+
+</view>
