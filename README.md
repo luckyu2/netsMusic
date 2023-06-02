@@ -5,9 +5,8 @@
 
 使用方法：
 
-- 下载[API]()，安装依赖环境，默认命令 npm start
+- 下载[NODEJS-API文件](https://github.com/luckyu2/MusicAPI)和本项目，安装依赖环境，默认命令 npm start
 
-- 打开[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+- 打开微信开发者工具并导入
 
-- 导入本项目
-- 需要API接口文档的可以前往本人[博客](https://luckyu.xyz/)加我微信获取
+- 需要API接口文档的可以前往[这里](https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi)
